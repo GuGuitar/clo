@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-        body { font-family: 'Kanit', sans-serif; background-color: #f8f9fa; }
+        body { font-family: 'Kanit', sans-serif; background-color: #f4f4f4; }
         section { scroll-margin-top: 100px; }
         .section-title { margin-bottom: 2rem; border-left: 5px solid #ff0000; padding-left: 15px; font-weight: 600; }
         .card { border: none; box-shadow: 0 4px 6px rgba(16, 16, 16, 0.05); transition: transform 0.3s; }
@@ -224,7 +224,7 @@
                 <span class="badge bg-primary rounded-pill mt-2">New</span>
             </a>
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
-                <div>
+                <div>      
                     <div class="fw-bold mb-1">เปิดรับสมัครบริษัทเข้าร่วมโครงการสหกิจศึกษา</div>
                     <small class="text-muted">สำหรับองค์กรที่ต้องการรับนิสิตนักศึกษาเข้าฝึกปฏิบัติงานในภาคการศึกษาต่อไป</small>
                 </div>
