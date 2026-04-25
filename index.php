@@ -108,27 +108,103 @@
     <section id="courses" class="mb-5">
         <h2 class="section-title">Showcase ของหลักสูตร</h2>
         <div class="row g-4">
+            <!-- Course 1 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <div class="card-body text-center">
+                    <div class="card-body text-center d-flex flex-column">
                         <h4 class="card-title text-primary">SWU IS222</h4>
-                        <p class="card-text text-muted">รายวิชาการเตรียมความพร้อมสำหรับการฝึกประสบการณ์วิชาชีพเบื้องต้น</p>
+                        <p class="card-text text-muted flex-grow-1">รายวิชาระบบจัดการฐานข้อมูล <br>(Database Management System)</p>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#courseModal1">ดูรายละเอียด</button>
                     </div>
                 </div>
             </div>
+            <!-- Course 2 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <div class="card-body text-center">
+                    <div class="card-body text-center d-flex flex-column">
                         <h4 class="card-title text-primary">SWU IS223</h4>
-                        <p class="card-text text-muted">รายวิชาสหกิจศึกษา เตรียมความพร้อมนิสิตและเข้าฝึกงานในบริษัทชั้นนำ</p>
+                        <p class="card-text text-muted flex-grow-1">รายวิชาการพัฒนาและการบริหารเว็บไซต์ <br>(Web Development and Management)</p>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#courseModal2">ดูรายละเอียด</button>
                     </div>
                 </div>
             </div>
+            <!-- Course 3 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <div class="card-body text-center">
+                    <div class="card-body text-center d-flex flex-column">
                         <h4 class="card-title text-primary">SWU IS224</h4>
-                        <p class="card-text text-muted">รายวิชาสำหรับการฝึกงานภาคฤดูร้อน และการประเมินผลการเรียนรู้</p>
+                        <p class="card-text text-muted flex-grow-1">รายวิชาการพัฒนาแพลตฟอร์มดิจิทัล <br>(Digital Platform Development)</p>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#courseModal3">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals สำหรับแต่ละหลักสูตร -->
+        <!-- Modal 1 -->
+        <div class="modal fade" id="courseModal1" tabindex="-1" aria-labelledby="courseModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="courseModal1Label">รายละเอียดรายวิชา SWU IS222</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS222 ที่นี่ -->
+                        <h6>รายวิชาระบบจัดการฐานข้อมูล (Database Management System)</h6>
+                        <p>แนวคิดพื้นฐานเกี่ยวกับข้อมูลและฐานข้อมูล ประเภทและโครงสร้างของฐานข้อมูลการ
+จัดการข้อมูลและระบบจัดการฐานข้อมูล โปรแกรมฐานข้อมูล การวิเคราะห์ ฝึกทักษะการออกแบบ
+และพัฒนาฐานข้อมูลด้วยโปรแกรมจัดการฐานข้อมูล การประยุกต์ฐานข้อมูลสำหรับงานสารสนเทศ
+และการจัดการสารสนเทศในองค์กร ฝึกปฏิบัติการที่สอดคล้องกับเนื้อหาภาคบรรยาย</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="courseModal2" tabindex="-1" aria-labelledby="courseModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="courseModal2Label">รายละเอียดรายวิชา SWU IS223</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS223 ที่นี่ -->
+                        <h6>รายวิชาการพัฒนาและการบริหารเว็บไซต์ (Web Development and Management)</h6>
+                        <p>หลักการออกแบบ องค์ประกอบ โครงสร้างเว็บด้วยภาษาเอชทีเอ็มแอล ซีเอสเอส
+จาวา สคริปต์และรูปแบบภาษาอื่น การประยุกต์ใช้เทคโนโลยีในการพัฒนาเว็บ ประโยชน์และ
+การประยุกต์ใช้งานเว็บ การบริหารจัดการ และการเผยแพร่สารสนเทศบนเว็บ การคัดเลือก และ
+ประเมินคุณค่าเว็บไซต์</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal fade" id="courseModal3" tabindex="-1" aria-labelledby="courseModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="courseModal3Label">รายละเอียดรายวิชา SWU IS224</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS224 ที่นี่ -->
+                        <h6>รายวิชาการพัฒนาแพลตฟอร์มดิจิทัล (Digital Platform Development)</h6>
+                        <p>ระบบนิเวศน์ดิจิทัล กระบวนการพัฒนาแพลตฟอร์มดิจิทัล ขั้นตอนในการพัฒนา
+แพลตฟอร์มดิจิทัลสำหรับองค์กร การวิเคราะห์ความต้องการ การออกแบบระบบข้ามแพลตฟอร์มให้มี
+การทำงานร่วมกันได้ หลักการควบคุมการทำงานข้ามแพลตฟอร์มระบบ รูปแบบการต่อเชื่อมระบบข้าม
+แฟลตฟอร์มการทดสอบ การติดตั้งและปรับใช้ในองค์กร</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
                     </div>
                 </div>
             </div>
