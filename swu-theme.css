@@ -1,20 +1,20 @@
 :root {
-  /* SWU Official Colors */
-  --swu-red: #DA2128;
-  --swu-red-hover: #b01820;
-  --swu-grey: #636466;
-  --swu-dark: #231F20;
-  
-  /* Override Bootstrap CSS Variables globally */
-  --bs-primary: #DA2128;
-  --bs-primary-rgb: 218, 33, 40;
-  --bs-secondary: #636466;
-  --bs-secondary-rgb: 99, 100, 102;
-  --bs-dark: #231F20;
-  --bs-dark-rgb: 35, 31, 32;
-  
-  --bs-link-color: #DA2128;
-  --bs-link-hover-color: #b01820;
+    /* SWU Official Colors */
+    --swu-red: #DA2128;
+    --swu-red-hover: #b01820;
+    --swu-grey: #636466;
+    --swu-dark: #231F20;
+
+    /* Override Bootstrap CSS Variables globally */
+    --bs-primary: #DA2128;
+    --bs-primary-rgb: 218, 33, 40;
+    --bs-secondary: #636466;
+    --bs-secondary-rgb: 99, 100, 102;
+    --bs-dark: #231F20;
+    --bs-dark-rgb: 35, 31, 32;
+
+    --bs-link-color: #DA2128;
+    --bs-link-hover-color: #b01820;
 }
 
 /* Custom Overrides for Bootstrap Buttons */
@@ -42,6 +42,7 @@
 .text-primary {
     color: var(--swu-red) !important;
 }
+
 .text-secondary {
     color: var(--swu-grey) !important;
 }
@@ -50,9 +51,11 @@
 .bg-primary {
     background-color: var(--swu-red) !important;
 }
+
 .bg-secondary {
     background-color: var(--swu-grey) !important;
 }
+
 .bg-dark {
     background-color: var(--swu-dark) !important;
 }
@@ -88,12 +91,6 @@
     border-radius: 0.5rem;
 }
 
-.hero {
-    background: url('https://www.swu.ac.th/images/head/2569/Prasarnmit.png') center/cover no-repeat !important;
-    color: rgb(157, 10, 10);
-    border-color: #8b1318;
-    box-shadow: #231F20;
-}
 
 .login-header {
     background: linear-gradient(135deg, var(--swu-red) 0%, #a6161c 100%) !important;
