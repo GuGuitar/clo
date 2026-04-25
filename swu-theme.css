@@ -100,7 +100,37 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     color: var(--swu-red) !important;
 }
+/* สไตล์สำหรับ Hero Slide */
+.hero-slide {
+    height: 500px; /* ปรับความสูงตามต้องการ */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* ให้ข้อความอยู่ด้านล่างเหมือนในรูป */
+    padding-bottom: 60px;
+    position: relative;
+}
 
+/* ปรับแต่งปุ่ม Indicators (จุดกลมๆ ด้านล่าง) */
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--swu-red) !important;
+}
+
+/* เอฟเฟกต์ Fade */
+.carousel-fade .carousel-item {
+    transition-duration: 0.5s;
+}
+
+.carousel-fade .carousel-item-2 {
+    transition-duration: 0.5s;
+}
 .login-header {
     background: linear-gradient(135deg, var(--swu-red) 0%, #a6161c 100%) !important;
     color: white;
