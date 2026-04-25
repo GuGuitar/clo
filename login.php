@@ -71,11 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST" action="">
             <div class="mb-3">
                 <label for="username" class="form-label text-muted">ชื่อผู้ใช้งาน (Username)</label>
-                <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="เช่น 6610001, admin, teacher">
+                <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="student , teacher or admin">
             </div>
             <div class="mb-4">
                 <label for="password" class="form-label text-muted">รหัสผ่าน (Password)</label>
-                <input type="password" class="form-control form-control-lg" id="password" name="password" required placeholder="1234">
+                <input type="password" class="form-control form-control-lg" id="password" name="password" required placeholder="password">
             </div>
             <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">เข้าสู่ระบบ</button>
         </form>
