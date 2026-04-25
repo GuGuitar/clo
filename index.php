@@ -93,15 +93,48 @@
 </nav>
 <!-- hello -->
 
-<header class="hero text-center position-relative overflow-hidden">
-    <div class="container position-relative z-1">
-        <h1 class="display-4 fw-bold mb-3">ระบบจัดการ Internships</h1>
-        <p class="lead mb-4">ระบบที่ช่วยอำนวยความสะดวกในการฝึกงาน และสหกิจศึกษา สำหรับนิสิต คณาจารย์ และผู้ดูแล</p>
-        <?php if(!isset($_SESSION['user_id'])): ?>
-            <a href="login.php" class="btn btn-light btn-lg text-primary fw-bold shadow">เข้าสู่ระบบทันที</a>
-        <?php endif; ?>
+<div id="heroCarousel" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button> </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image:  url('https://www.sangfor.com/sites/default/files/inline-images/Srinakharinwirot-University-(SWU).jpg');">
+                <div class="container text-white text-start">
+                    <h1 class="display-4 fw-bold mb-2">Learning University for Society</h1>
+                    <p class="lead mb-4">Srinakharinwirot University, Prasarnmit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/tripniceday/uploads/places/1657879291243.jpeg');">
+                <div class="container text-white text-start">
+                    <h1 class="display-4 fw-bold mb-2">ระบบจัดการ Internships</h1>
+                    <p class="lead mb-4">อำนวยความสะดวกในการฝึกงานสำหรับนิสิตและคณาจารย์</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/WMF0XgDGmQw/maxresdefault.jpg');">
+                <div class="container text-white text-start">
+                </div>
+            </div>
+        </div>
     </div>
-</header>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <main class="container mt-5">
     
