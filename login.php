@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST" action="">
             <div class="mb-3">
                 <label for="username" class="form-label text-muted">ชื่อผู้ใช้งาน (Username)</label>
-                <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="student , teacher or admin">
+                <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="ID">
             </div>
             <div class="mb-4">
                 <label for="password" class="form-label text-muted">รหัสผ่าน (Password)</label>
