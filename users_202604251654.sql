@@ -10,7 +10,16 @@ INSERT INTO internships.users (username,password,`role`,first_name,last_name,tit
 	 ('6610005','1234','student','Weera','Suwan',NULL,3,NULL,NULL),
 	 ('6610006','1234','student','Napa','Deemak',NULL,4,NULL,NULL),
 	 ('6610007','1234','student','Komsan','Kengkan',NULL,3,'',NULL),
-	 ('6610008','1234','student','Suda','Ngamta',NULL,4,NULL,NULL);
+	 ('6610008','1234','student','Suda','Ngamta',NULL,4,NULL,NULL)
+ON DUPLICATE KEY UPDATE
+    password=VALUES(password),
+    `role`=VALUES(`role`),
+    first_name=VALUES(first_name),
+    last_name=VALUES(last_name),
+    title=VALUES(title),
+    year_level=VALUES(year_level),
+    profile_image=VALUES(profile_image),
+    education=VALUES(education);
 INSERT INTO internships.users (username,password,`role`,first_name,last_name,title,year_level,profile_image,education) VALUES
 	 ('6610009','1234','student','Wichai','Phoprasert',NULL,3,NULL,NULL),
 	 ('6610010','1234','student','Naree','Rakrien',NULL,4,NULL,NULL),
@@ -22,17 +31,26 @@ INSERT INTO internships.users (username,password,`role`,first_name,last_name,tit
 ปริญญาโท: MBA Finance, Colorado State University\\n
 ปริญญาตรี: น.บ. นิติศาสตร์, มหาวิทยาลัยสุโขทัยธรรมาธิราช\\n
 ปริญญาตรี: บธ.บ การตลาด, จุฬาลงกรณ์มหาวิทยาลัย'),
-	 ('teacher04','1234','teacher','โชคธำรงค์','จงจอหอ','อ.ดร.',NULL,'Chokthamrong.jpg','ปรืญญาเอก: ปร.ด. สำรสนเทศศึกษำ, สำรสนเทศศึกษำ\\n
-ปริญญาโท: วท.ม. เทคโนโลยีผู้ประกอบกำรและกำรจัดกำรนวัตกรรม, มหำวิทยำลัยนเรศวร\\n
-ปรืญญาโท: ศศ.ม. กำรจัดกำรทรัพยำกรชีวภำพ, มหำวิทยำลัยเทคโนโลยีพระจอมเกล้ำธนบุรี\\n
-ปริญญาตรี: ศศ.บ. สำรสนเทศศำสตร์, มหำวิทยำลัยขอนแก่น'),
+	 ('teacher04','1234','teacher','โชคธำรงค์','จงจอหอ','อ.ดร.',NULL,'Chokthamrong.jpg','ปริญญาเอก: ปร.ด. สารสนเทศศึกษา, สารสนเทศศึกษา\\n
+ปริญญาโท: วท.ม. เทคโนโลยีผู้ประกอบการและการจัดการนวัตกรรม, มหาวิทยาลัยนเรศวร\\n
+ปริญญาโท: ศศ.ม. การจัดการทรัพยากรชีวภาพ, มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี\\n
+ปริญญาตรี: ศศ.บ. สารสนเทศศาสตร์, มหาวิทยาลัยขอนแก่น'),
 	 ('teacher05','1234','teacher','โชติมา','วัฒนะ','อ.',NULL,'Chotima.jpg','ปริญญาเอก: Ph.D. Philosophy Information Science, Sukhothai Thammathirat Open University \\n
 ปริญญาโท: M.A. Information Management, KhonKean University\\n
 ปริญญาตรี: B.A. Information Science, Mahasarakham University'),
 	 ('teacher06','1234','teacher','ดุษฎี','สีวังคำ','ผศ.ดร.',NULL,'Dussadee-683x1024.jpg','ปริญญาเอก: Ph.D. Technical Education Technology, King Mongkut’s University of Technology North Bangkok\\n
 ปริญญาโท: M.S. Information Technology,  King Mongkut’s University of Technology North Bangkok\\n
 ปริญญาตรี	: B.S. Computer Science, Rajabhat Institute Phetchabun'),
-	 ('teacher07','1234','teacher','ศศิพิมล','ประพินพงศกร','ผศ.ดร.',NULL,'Sasipimol-683x1024.jpg','ปริญญาเอก: ค.ด. เทคโนโลยีแยีละสื่อสื่สารการศึกษา, จุฬาลงกรณ์มณ์ หาวิทวิ ยาลัย\\n'),
+	 ('teacher07','1234','teacher','ศศิพิมล','ประพินพงศกร','ผศ.ดร.',NULL,'Sasipimol-683x1024.jpg','ปริญญาเอก: ค.ด. เทคโนโลยีและสื่อสารการศึกษา, จุฬาลงกรณ์มหาวิทยาลัย\\n'),
 	 ('teacher08','1234','teacher','ศุมรรษตรา','แสนวา','อ.ดร.',NULL,'Sumattra-683x1024.jpg','ปริญญาเอก: ปร.ด. สารสนเทศศึกษา , มหาวิทยาลัยขอนแก่น \\n
 ปริญญาโท: ศศ.ม. บรรณารักษศาสตร์และสารสนเทศศาสตร์ , มหาวิทยาลัยมหาสารคาม\\n
-ปริญฯาตรี: ศศ.บ. ภาษาอังกฤษ, มหาวิทยาลัยมหาสารคาม');
+ปริญญาตรี: ศศ.บ. ภาษาอังกฤษ, มหาวิทยาลัยมหาสารคาม')
+ON DUPLICATE KEY UPDATE
+    password=VALUES(password),
+    `role`=VALUES(`role`),
+    first_name=VALUES(first_name),
+    last_name=VALUES(last_name),
+    title=VALUES(title),
+    year_level=VALUES(year_level),
+    profile_image=VALUES(profile_image),
+    education=VALUES(education);
