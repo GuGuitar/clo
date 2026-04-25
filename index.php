@@ -17,6 +17,50 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
         .nav-link { font-weight: 500; }
         footer { background-color: #212529; color: white; padding: 2rem 0; margin-top: 4rem; text-align: center; }
+
+        /* Teacher Card Styles */
+        .teacher-card {
+            transition: all 0.3s ease;
+            border-radius: 1rem !important;
+        }
+        .teacher-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(218, 33, 40, 0.15) !important;
+        }
+        .teacher-photo-wrapper {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #e9ecef;
+            transition: border-color 0.3s ease;
+        }
+        .teacher-card:hover .teacher-photo-wrapper {
+            border-color: var(--swu-red, #DA2128);
+        }
+        .teacher-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .teacher-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            color: #bbb;
+            border: 2px dashed #ccc;
+            border-radius: 50%;
+        }
+        .edu-item {
+            transition: transform 0.2s ease;
+        }
+        .edu-item:hover {
+            transform: translateX(5px);
+        }
     </style>
     <link rel="stylesheet" href="swu-theme.css">
 </head>
@@ -145,22 +189,97 @@
     <!-- ข้อมูลเกี่ยวกับอาจารย์ -->
     <section id="teachers" class="mb-5 bg-white p-4 rounded shadow-sm">
         <h2 class="section-title">ข้อมูลอาจารย์ที่ปรึกษา</h2>
-        <div class="row">
+        <div class="row g-4">
             <?php 
-            $stmt = $conn->query("SELECT first_name, last_name, username FROM users WHERE role='teacher'");
+            $stmt = $conn->query("SELECT id, first_name, last_name, title, username, profile_image, education FROM users WHERE role='teacher'");
+            $teacherIndex = 0;
             while($teacher = $stmt->fetch_assoc()):
+                $teacherIndex++;
             ?>
-            <div class="col-md-4 mb-3">
-                <div class="d-flex align-items-center p-3 border rounded">
-                    <div class="bg-secondary rounded-circle d-flex justify-content-center align-items-center text-white fw-bold me-3" style="width: 50px; height: 50px;">
-                        <?= mb_substr($teacher['first_name'], 0, 1, 'UTF-8') ?>
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card teacher-card h-100 text-center p-3 border-0 shadow-sm">
+                    <!-- รูปอาจารย์ -->
+                    <div class="teacher-photo-wrapper mx-auto mb-3">
+                        <?php if(!empty($teacher['profile_image']) && file_exists('uploads/teachers/' . $teacher['profile_image'])): ?>
+                            <img src="uploads/teachers/<?= htmlspecialchars($teacher['profile_image']) ?>" 
+                                 alt="รูป อ.<?= htmlspecialchars($teacher['first_name']) ?>" 
+                                 class="teacher-photo">
+                        <?php else: ?>
+                            <div class="teacher-photo-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                </svg>
+                                <div class="mt-1" style="font-size: 0.7rem; color: #aaa;">เว้นที่ใส่รูป</div>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                    <div>
-                        <h6 class="mb-0 fw-bold">อ. <?= htmlspecialchars($teacher['first_name'] . ' ' . $teacher['last_name']) ?></h6>
-                        <small class="text-muted">ID: <?= htmlspecialchars($teacher['username']) ?></small>
+                    <!-- ชื่ออาจารย์ -->
+                    <h6 class="fw-bold mb-1"><?= htmlspecialchars(($teacher['title'] ?? 'อ.') . ' ' . $teacher['first_name'] . ' ' . $teacher['last_name']) ?></h6>
+                    <small class="text-muted d-block mb-2">ID: <?= htmlspecialchars($teacher['username']) ?></small>
+                    <!-- ลิ้งค์ดูวุฒิการศึกษา -->
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#eduModal<?= $teacherIndex ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16">
+                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032z"/>
+                        </svg>
+                        ดูวุฒิการศึกษา
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modal วุฒิการศึกษา -->
+            <div class="modal fade" id="eduModal<?= $teacherIndex ?>" tabindex="-1" aria-labelledby="eduModalLabel<?= $teacherIndex ?>" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background: linear-gradient(135deg, var(--swu-red, #DA2128) 0%, #8b1318 100%); color: white;">
+                            <h5 class="modal-title" id="eduModalLabel<?= $teacherIndex ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                                    <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+                                    <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032z"/>
+                                </svg>
+                                วุฒิการศึกษา — <?= htmlspecialchars(($teacher['title'] ?? 'อ.') . ' ' . $teacher['first_name'] . ' ' . $teacher['last_name']) ?>
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <?php if(!empty($teacher['education'])): ?>
+                                <?php 
+                                $eduLines = explode("\\n", $teacher['education']);
+                                foreach($eduLines as $line):
+                                    $line = trim($line);
+                                    if(empty($line)) continue;
+                                    // Split at the colon to highlight the degree level
+                                    $parts = explode(':', $line, 2);
+                                ?>
+                                <div class="edu-item d-flex align-items-start mb-3 p-2 rounded" style="background: #f8f9fa;">
+                                    <div class="edu-icon me-3 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--swu-red, #DA2128)" viewBox="0 0 16 16">
+                                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+                                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <?php if(count($parts) >= 2): ?>
+                                            <strong class="text-primary"><?= htmlspecialchars(trim($parts[0])) ?></strong><br>
+                                            <span><?= htmlspecialchars(trim($parts[1])) ?></span>
+                                        <?php else: ?>
+                                            <span><?= htmlspecialchars($line) ?></span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p class="text-muted text-center mb-0">ยังไม่มีข้อมูลวุฒิการศึกษา</p>
+                            <?php endif; ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <?php endwhile; ?>
         </div>
     </section>
