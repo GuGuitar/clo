@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Kanit', sans-serif; 
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 237, 237, 0.5)), 
                     url('https://www.sangfor.com/sites/default/files/inline-images/Srinakharinwirot-University-(SWU).jpg') center/cover no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center; }
         .login-card { max-width: 400px; width: 100%; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: none; }
         .login-header { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); color: white; text-align: center; padding: 2rem; border-radius: 1rem 1rem 0 0; }
