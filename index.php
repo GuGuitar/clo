@@ -10,8 +10,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #f8f9fa; }
-        .hero { background: linear-gradient(135deg, #000000 0%, #00d5ff 100%); color: white; padding: 4rem 0; border-radius: 0 0 2rem 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body { font-family: 'Kanit', sans-serif; background-color: #f4f4f4; }
+        section { scroll-margin-top: 100px; }
         .section-title { margin-bottom: 2rem; border-left: 5px solid #ff0000; padding-left: 15px; font-weight: 600; }
         .card { border: none; box-shadow: 0 4px 6px rgba(16, 16, 16, 0.05); transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
@@ -92,15 +93,48 @@
 </nav>
 <!-- hello -->
 
-<header class="hero text-center position-relative overflow-hidden">
-    <div class="container position-relative z-1">
-        <h1 class="display-4 fw-bold mb-3">ระบบจัดการ Internships</h1>
-        <p class="lead mb-4">ระบบที่ช่วยอำนวยความสะดวกในการฝึกงาน และสหกิจศึกษา สำหรับนิสิต คณาจารย์ และผู้ดูแล</p>
-        <?php if(!isset($_SESSION['user_id'])): ?>
-            <a href="login.php" class="btn btn-light btn-lg text-primary fw-bold shadow">เข้าสู่ระบบทันที</a>
-        <?php endif; ?>
+<div id="heroCarousel" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button> </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image:  url('https://www.sangfor.com/sites/default/files/inline-images/Srinakharinwirot-University-(SWU).jpg');">
+                <div class="container text-white text-start">
+                    <h1 class="display-4 fw-bold mb-2">Learning University for Society</h1>
+                    <p class="lead mb-4">Srinakharinwirot University, Prasarnmit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/tripniceday/uploads/places/1657879291243.jpeg');">
+                <div class="container text-white text-start">
+                    <h1 class="display-4 fw-bold mb-2">ระบบจัดการ Internships</h1>
+                    <p class="lead mb-4">อำนวยความสะดวกในการฝึกงานสำหรับนิสิตและคณาจารย์</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/WMF0XgDGmQw/maxresdefault.jpg');">
+                <div class="container text-white text-start">
+                </div>
+            </div>
+        </div>
     </div>
-</header>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <main class="container mt-5">
     
@@ -223,7 +257,7 @@
                 <span class="badge bg-primary rounded-pill mt-2">New</span>
             </a>
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
-                <div>
+                <div>      
                     <div class="fw-bold mb-1">เปิดรับสมัครบริษัทเข้าร่วมโครงการสหกิจศึกษา</div>
                     <small class="text-muted">สำหรับองค์กรที่ต้องการรับนิสิตนักศึกษาเข้าฝึกปฏิบัติงานในภาคการศึกษาต่อไป</small>
                 </div>
@@ -451,5 +485,20 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
