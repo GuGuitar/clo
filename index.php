@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Kanit', sans-serif; background-color: #f8f9fa; }
-        .hero { background: linear-gradient(135deg, #000000 0%, #00d5ff 100%); color: white; padding: 4rem 0; border-radius: 0 0 2rem 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .section-title { margin-bottom: 2rem; border-left: 5px solid #ff0000; padding-left: 15px; font-weight: 600; }
         .card { border: none; box-shadow: 0 4px 6px rgba(16, 16, 16, 0.05); transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }

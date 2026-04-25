@@ -92,6 +92,15 @@
 }
 
 
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 243, 243, 0.7)),
+        url('https://www.swu.ac.th/images/head/2569/Prasarnmit.png') center/cover no-repeat !important;
+    padding: 6rem 0;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: var(--swu-red) !important;
+}
+
 .login-header {
     background: linear-gradient(135deg, var(--swu-red) 0%, #a6161c 100%) !important;
     color: white;
