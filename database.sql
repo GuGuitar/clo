@@ -53,7 +53,7 @@ CREATE TABLE `evaluations` (
 
 -- Users (Staff, Teachers, Students)
 INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`title`,`year_level`,`profile_image`,`education`) VALUES
-	 ('admin','admin','staff','Admin','Krub',NULL,NULL,NULL,NULL),
+	 ('admin','1234','staff','Admin','Krub',NULL,NULL,NULL,NULL),
 	 ('teacher01','1234','teacher','ดิษฐ์','สุทธิวงศ์','อ.ดร.',NULL,'Dit-scaled.jpg','ปริญญาเอก: Ph.D. Information Technology , มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ\\n
 ปริญญาโท: วท.ม. การจัดการเทคโนโลยีสารสนเทศ , มหาวิทยาลัยหอการค้าไทย\\n
 ปริญญาตรี: วท.บ. ศาสตร์คอมพิวเตอร์ , มหาวิทยาลัยธรรมศาสตร์'),
