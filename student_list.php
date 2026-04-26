@@ -28,18 +28,27 @@ $year = isset($_GET['year']) ? intval($_GET['year']) : 1;
                         <th>นามสกุล</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <?php
-                    // ตัวอย่าง Query (ปรับเปลี่ยนตามชื่อ Table และ Column ของคุณ)
-                    // $sql = "SELECT username, first_name, last_name FROM users WHERE role='student' AND student_year = $year";
-                    // $result = $conn->query($sql);
-                    // while($row = $result->fetch_assoc()): 
-                    ?>
-                    <tr>
-                        <td>6710XXXXXXX</td>
-                        <td>ตัวอย่าง ชื่อนิสิต</td>
-                        <td>ตัวอย่าง นามสกุล</td>
-                    </tr>
+<tbody>
+    <?php
+    // ดึงข้อมูลนิสิตตามปี
+    $sql = "SELECT username, first_name, last_name FROM users WHERE role='student' AND student_year = $year";
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        while($row = $result->fetch_assoc()): 
+    ?>
+        <tr>
+            <td><?php echo htmlspecialchars($row['username']); ?></td>
+            <td><?php echo htmlspecialchars($row['first_name']); ?></td>
+            <td><?php echo htmlspecialchars($row['last_name']); ?></td>
+        </tr>
+    <?php 
+        endwhile; 
+    } else {
+        echo "<tr><td colspan='3' class='text-center'>ไม่พบรายชื่อนิสิตชั้นปีที่ $year ในระบบ</td></tr>";
+    }
+    ?>
+</tbody>
                     <?php // endwhile; ?>
                 </tbody>
             </table>
