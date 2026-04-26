@@ -9,12 +9,13 @@ $year = isset($_GET['year']) ? intval($_GET['year']) : 1;
     <title>รายชื่อนิสิตชั้นปีที่ <?php echo $year; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="swu-theme.css" rel="stylesheet">
     <style>body { font-family: 'Kanit', sans-serif; background-color: #f4f4f4; }</style>
 </head>
 <body>
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>รายชื่อนิสิตชั้นปีที่ <?php echo $year; ?></h2>
+        <h1>รายชื่อนิสิตชั้นปีที่ <?php echo $year; ?></h1>
         <a href="index.php#students" class="btn btn-secondary">ย้อนกลับ</a>
     </div>
     
