@@ -32,14 +32,14 @@ $year = isset($_GET['year']) ? intval($_GET['year']) : 1;
 <tbody>
     <?php
     // ดึงข้อมูลนิสิตตามปี
-    $sql = "SELECT username, first_name, last_name FROM users WHERE role='student' AND year_level = $year";
+    $sql = "SELECT username, first_name, last_name FROM users WHERE role='student' AND student_year = $year";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
         while($row = $result->fetch_assoc()): 
     ?>
         <tr>
-            <td><?php echo htmlspecialchars($row['username']); ?></td>
+            <td><?php echo htmlspecialchars($row['username']); ?></td>  
             <td><?php echo htmlspecialchars($row['first_name']); ?></td>
             <td><?php echo htmlspecialchars($row['last_name']); ?></td>
         </tr>
