@@ -184,7 +184,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS222 ที่นี่ -->
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS222 -->
                         <h6>รายวิชาระบบจัดการฐานข้อมูล (Database Management System)</h6>
                         <p>แนวคิดพื้นฐานเกี่ยวกับข้อมูลและฐานข้อมูล ประเภทและโครงสร้างของฐานข้อมูลการ
 จัดการข้อมูลและระบบจัดการฐานข้อมูล โปรแกรมฐานข้อมูล การวิเคราะห์ ฝึกทักษะการออกแบบ
@@ -207,7 +207,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS223 ที่นี่ -->
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS223 -->
                         <h6>รายวิชาการพัฒนาและการบริหารเว็บไซต์ (Web Development and Management)</h6>
                         <p>หลักการออกแบบ องค์ประกอบ โครงสร้างเว็บด้วยภาษาเอชทีเอ็มแอล ซีเอสเอส
 จาวา สคริปต์และรูปแบบภาษาอื่น การประยุกต์ใช้เทคโนโลยีในการพัฒนาเว็บ ประโยชน์และ
@@ -230,7 +230,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS224 ที่นี่ -->
+                        <!-- ใส่ข้อมูลของหลักสูตร SWU IS224 -->
                         <h6>รายวิชาการพัฒนาแพลตฟอร์มดิจิทัล (Digital Platform Development)</h6>
                         <p>ระบบนิเวศน์ดิจิทัล กระบวนการพัฒนาแพลตฟอร์มดิจิทัล ขั้นตอนในการพัฒนา
 แพลตฟอร์มดิจิทัลสำหรับองค์กร การวิเคราะห์ความต้องการ การออกแบบระบบข้ามแพลตฟอร์มให้มี
