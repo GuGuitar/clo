@@ -58,7 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="card login-card">
     <div class="login-header">
-        <h3 class="fw-bold mb-0">เข้าสู่ระบบ</h4>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Logo_of_Srinakharinwirot_University.svg/1280px-Logo_of_Srinakharinwirot_University.svg.png" alt="SWU Logo" class="mb-3" style="height: 80px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+        <h3 class="fw-bold mb-0">เข้าสู่ระบบ</h3>
         <p class="text-white-50 mt-2">Internships Management System</p>
     </div>
     <div class="card-body p-4">
