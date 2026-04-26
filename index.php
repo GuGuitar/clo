@@ -267,34 +267,42 @@
 
     <!-- ข้อมูลเกี่ยวกับนิสิต -->
     <section id="students" class="mb-5">
-        <h2 class="section-title">ข้อมูลเกี่ยวกับนิสิตปัจจุบัน (ปี 1-4)</h2>
-        <div class="row g-3 text-center">
-            <div class="col-6 col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
+    <h2 class="section-title">ข้อมูลเกี่ยวกับนิสิตปัจจุบัน (ปี 1-4)</h2>
+    <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+            <a href="student_list.php?year=1" class="text-decoration-none">
+                <div class="p-4 bg-white rounded shadow-sm card-hover">
                     <h3 class="text-info fw-bold">68</h3>
                     <div class="text-muted">นิสิตชั้นปีที่ 1</div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
+            </a>
+        </div>
+        <div class="col-6 col-md-3">
+            <a href="student_list.php?year=2" class="text-decoration-none">
+                <div class="p-4 bg-white rounded shadow-sm card-hover">
                     <h3 class="text-info fw-bold">67</h3>
                     <div class="text-muted">นิสิตชั้นปีที่ 2</div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
+            </a>
+        </div>
+        <div class="col-6 col-md-3">
+            <a href="student_list.php?year=3" class="text-decoration-none">
+                <div class="p-4 bg-white rounded shadow-sm card-hover">
                     <h3 class="text-info fw-bold">66</h3>
                     <div class="text-muted">นิสิตชั้นปีที่ 3</div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
+            </a>
+        </div>
+        <div class="col-6 col-md-3">
+            <a href="student_list.php?year=4" class="text-decoration-none">
+                <div class="p-4 bg-white rounded shadow-sm card-hover">
                     <h3 class="text-info fw-bold">65</h3>
                     <div class="text-muted">นิสิตชั้นปีที่ 4</div>
                 </div>
-            </div>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ข้อมูลเกี่ยวกับอาจารย์ -->
     <section id="teachers" class="mb-5 bg-white p-4 rounded shadow-sm">
