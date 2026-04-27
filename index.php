@@ -101,7 +101,7 @@
 
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image:  url('https://www.sangfor.com/sites/default/files/inline-images/Srinakharinwirot-University-(SWU).jpg');">
+            <div class="hero-slide" style="background-image:  url('uploads/Pic/S__68255788.jpg');">
                 <div class="container text-white text-start">
                     <h1 class="display-4 fw-bold mb-2">Learning University for Society</h1>
                     <p class="lead mb-4">Srinakharinwirot University, Prasarnmit</p>
@@ -110,7 +110,7 @@
         </div>
 
         <div class="carousel-item" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/tripniceday/uploads/places/1657879291243.jpeg');">
+            <div class="hero-slide" style="background-image: url('uploads/Pic/S__68255789.jpg');">
                 <div class="container text-white text-start">
                     <h1 class="display-4 fw-bold mb-2">ระบบจัดการ Internships</h1>
                     <p class="lead mb-4">อำนวยความสะดวกในการฝึกงานสำหรับนิสิตและคณาจารย์</p>
@@ -119,7 +119,7 @@
         </div>
 
         <div class="carousel-item" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/WMF0XgDGmQw/maxresdefault.jpg');">
+            <div class="hero-slide" style="background-image: url('uploads/Pic/S__68255790.jpg');">
                 <div class="container text-white text-start">
                 </div>
             </div>
