@@ -27,7 +27,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">ชั้นปี</label>
-                    <select name="student_year" class="form-select">
+                    <select name="year_level" class="form-select">
                         <option value="1">ปี 1</option>
                         <option value="2">ปี 2</option>
                         <option value="3">ปี 3</option>
