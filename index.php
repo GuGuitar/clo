@@ -409,12 +409,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <div class="teacher-photo-placeholder" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; border-color: #00bcd4;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                        </div>
+                        <img src="uploads/Pic/กต.jpg" alt="กมลพัชร ดวงมณี" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">กมลพัชร ดวงมณี</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010610</small>
@@ -424,12 +419,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <div class="teacher-photo-placeholder" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; border-color: #00bcd4;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                        </div>
+                        <img src="uploads/Pic/รถ.jpg" alt="ธนพนธ์ ข้อพิสังข์" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">ธนพนธ์ ข้อพิสังข์</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010623</small>
@@ -439,12 +429,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <div class="teacher-photo-placeholder" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; border-color: #00bcd4;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                        </div>
+                        <img src="uploads/Pic/ฟม.jpg" alt="พัทธดนย์ คงคำ" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">พัทธดนย์ คงคำ</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010636</small>
@@ -454,12 +439,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <div class="teacher-photo-placeholder" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; border-color: #00bcd4;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                        </div>
+                        <img src="uploads/Pic/ณษ.jpg" alt="วรรณษา เทียมอุบล" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">วรรณษา เทียมอุบล</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010645</small>
@@ -469,12 +449,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <div class="teacher-photo-placeholder" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; border-color: #00bcd4;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
-                        </div>
+                       <img src="uploads/Pic/บจ.jpg" alt="อรสินี เดชเทวาประทาน" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">อรสินี เดชเทวาประทาน</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010652</small>
