@@ -28,10 +28,29 @@ CREATE TABLE `users` (
 CREATE TABLE `internship_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_id` int(11) NOT NULL,
+  `program_type` varchar(50) NOT NULL,
+  `major` varchar(100) NOT NULL,
+  `student_phone` varchar(20) NOT NULL,
+  `student_email` varchar(100) NOT NULL,
+  `internship_type` enum('course','experience') NOT NULL,
+  `course_code` varchar(20) DEFAULT NULL,
+  `course_name` varchar(100) DEFAULT NULL,
+  `location_type` enum('domestic','international') NOT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `doc_language` enum('thai','english') NOT NULL,
+  `doc_type` enum('consideration','consideration_and_referral') NOT NULL,
   `company_name` varchar(255) NOT NULL,
   `position` varchar(255) NOT NULL,
+  `coordinator_name` varchar(100) NOT NULL,
+  `agency_phone` varchar(20) NOT NULL,
+  `agency_email` varchar(100) NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
+  `semester` varchar(10) NOT NULL,
+  `academic_year` varchar(10) NOT NULL,
+  `attempt_number` int(11) NOT NULL DEFAULT 1,
+  `previous_agency` varchar(255) DEFAULT NULL,
+  `reason_for_change` text DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1 COMMENT '1: Received, 2: Advisor Approved, 3: Letter Issued, 4: Finished, 9: Canceled',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -95,6 +114,6 @@ INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`titl
 ปริญญาตรี: ศศ.บ. ภาษาอังกฤษ, มหาวิทยาลัยมหาสารคาม');
 
 -- Mock Internship Request
-INSERT INTO `internship_requests` (`student_id`, `company_name`, `position`, `start_date`, `end_date`, `status`) VALUES
-(3, 'Google Thai', 'Frontend Dev', '2026-06-01', '2026-08-31', 1),
-(4, 'Deepmind', 'AI Engineer', '2026-06-01', '2026-08-31', 2);
+INSERT INTO `internship_requests` (`student_id`, `program_type`, `major`, `student_phone`, `student_email`, `internship_type`, `course_code`, `course_name`, `location_type`, `country`, `doc_language`, `doc_type`, `company_name`, `position`, `coordinator_name`, `agency_phone`, `agency_email`, `start_date`, `end_date`, `semester`, `academic_year`, `attempt_number`, `previous_agency`, `reason_for_change`, `status`) VALUES
+(3, 'วท.บ.', 'วิทยาการคอมพิวเตอร์', '0812345678', 'mana@example.com', 'experience', NULL, NULL, 'domestic', NULL, 'thai', 'consideration', 'Google Thai', 'Frontend Dev', 'K. Somsak', '02-111-2222', 'hr@google.co.th', '2026-06-01', '2026-08-31', '1', '2569', 1, NULL, NULL, 1),
+(4, 'ศศ.บ.', 'ภาษาอังกฤษ', '0898765432', 'piti@example.com', 'course', 'EN401', 'Internship in English', 'international', 'UK', 'english', 'consideration_and_referral', 'Deepmind', 'AI Engineer', 'Mr. Smith', '+44-1234-567', 'smith@deepmind.com', '2026-06-01', '2026-08-31', '1', '2569', 2, 'OpenAI', 'Visa issue', 2);

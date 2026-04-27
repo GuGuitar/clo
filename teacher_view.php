@@ -86,26 +86,94 @@ $eval_result = $conn->query("SELECT * FROM evaluations WHERE request_id = $reque
                         <div class="alert alert-success" role="alert">คุณได้อนุมัติคำขอฝึกงานนี้เรียบร้อยแล้ว</div>
                     <?php endif; ?>
                     
-                    <div class="row mb-3">
+                    <h5 class="text-info fw-bold mb-3 mt-2 border-bottom pb-2">ข้อมูลนิสิต</h5>
+                    <div class="row mb-2">
                         <div class="col-md-4 text-muted fw-bold">รหัสนิสิต :</div>
-                        <div class="col-md-8"><?= htmlspecialchars($row['student_id_code']) ?></div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['student_id_code'] ?? '') ?></div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
                         <div class="col-md-4 text-muted fw-bold">ชื่อ - นามสกุล :</div>
-                        <div class="col-md-8"><?= htmlspecialchars($row['first_name'] . ' ' . $row['last_name']) ?> (ปี <?= $row['year_level'] ?>)</div>
+                        <div class="col-md-8"><?= htmlspecialchars(($row['first_name'] ?? '') . ' ' . ($row['last_name'] ?? '')) ?> (ปี <?= htmlspecialchars($row['year_level'] ?? '') ?>)</div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">หลักสูตร / สาขาวิชา :</div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['program_type'] ?? '') ?> / <?= htmlspecialchars($row['major'] ?? '') ?></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ข้อมูลติดต่อ :</div>
+                        <div class="col-md-8">โทร: <?= htmlspecialchars($row['student_phone'] ?? '-') ?> | อีเมล: <?= htmlspecialchars($row['student_email'] ?? '-') ?></div>
+                    </div>
+                    
+                    <h5 class="text-info fw-bold mb-3 mt-4 border-bottom pb-2">รูปแบบการฝึกงาน</h5>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">รูปแบบ :</div>
+                        <div class="col-md-8"><?= ($row['internship_type'] ?? '') == 'course' ? 'ในรายวิชา' : 'เพื่อหาประสบการณ์' ?></div>
+                    </div>
+                    <?php if(($row['internship_type'] ?? '') == 'course'): ?>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">รหัส/ชื่อวิชา :</div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['course_code'] ?? '') ?> <?= htmlspecialchars($row['course_name'] ?? '') ?></div>
+                    </div>
+                    <?php endif; ?>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">สถานที่ / ประเทศ :</div>
+                        <div class="col-md-8"><?= ($row['location_type'] ?? '') == 'domestic' ? 'ในประเทศ' : 'ต่างประเทศ' ?> <?= ($row['location_type'] ?? '') == 'international' ? '('.htmlspecialchars($row['country'] ?? '').')' : '' ?></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ประเภทเอกสาร :</div>
+                        <div class="col-md-8">
+                            <?= ($row['doc_language'] ?? '') == 'thai' ? 'ภาษาไทย' : 'ภาษาอังกฤษ' ?> | 
+                            <?= ($row['doc_type'] ?? '') == 'consideration' ? 'หนังสือขอความอนุเคราะห์' : 'หนังสือขอความอนุเคราะห์ + หนังสือส่งตัว' ?>
+                        </div>
+                    </div>
+                    
+                    <h5 class="text-info fw-bold mb-3 mt-4 border-bottom pb-2">ข้อมูลหน่วยงาน</h5>
+                    <div class="row mb-2">
                         <div class="col-md-4 text-muted fw-bold">สถานประกอบการ :</div>
-                        <div class="col-md-8 fw-bold text-primary"><?= htmlspecialchars($row['company_name']) ?></div>
+                        <div class="col-md-8 fw-bold text-dark"><?= htmlspecialchars($row['company_name'] ?? '') ?></div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
                         <div class="col-md-4 text-muted fw-bold">ตำแหน่ง :</div>
-                        <div class="col-md-8"><?= htmlspecialchars($row['position']) ?></div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['position'] ?? '') ?></div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ผู้ประสานงาน :</div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['coordinator_name'] ?? '-') ?></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ติดต่อหน่วยงาน :</div>
+                        <div class="col-md-8">โทร: <?= htmlspecialchars($row['agency_phone'] ?? '-') ?> | อีเมล: <?= htmlspecialchars($row['agency_email'] ?? '-') ?></div>
+                    </div>
+                    <div class="row mb-2">
                         <div class="col-md-4 text-muted fw-bold">ระยะเวลา :</div>
-                        <div class="col-md-8"><?= date('d/m/Y', strtotime($row['start_date'])) ?> ถึง <?= date('d/m/Y', strtotime($row['end_date'])) ?></div>
+                        <div class="col-md-8">
+                            <?php if (!empty($row['start_date']) && !empty($row['end_date'])): ?>
+                                <?= date('d/m/Y', strtotime($row['start_date'])) ?> ถึง <?= date('d/m/Y', strtotime($row['end_date'])) ?>
+                            <?php else: ?>
+                                -
+                            <?php endif; ?>
+                        </div>
                     </div>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ภาคเรียน/ปีการศึกษา :</div>
+                        <div class="col-md-8"><?= htmlspecialchars($row['semester'] ?? '') ?> / <?= htmlspecialchars($row['academic_year'] ?? '') ?></div>
+                    </div>
+                    
+                    <h5 class="text-info fw-bold mb-3 mt-4 border-bottom pb-2">ข้อมูลการยื่น</h5>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">ยื่นครั้งที่ :</div>
+                        <div class="col-md-8"><span class="badge bg-secondary"><?= htmlspecialchars($row['attempt_number'] ?? '1') ?></span></div>
+                    </div>
+                    <?php if(($row['attempt_number'] ?? 1) > 1): ?>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">หน่วยงานเดิม :</div>
+                        <div class="col-md-8 text-danger"><?= htmlspecialchars($row['previous_agency'] ?? '-') ?></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-muted fw-bold">เหตุผลการเปลี่ยน :</div>
+                        <div class="col-md-8"><?= nl2br(htmlspecialchars($row['reason_for_change'] ?? '-')) ?></div>
+                    </div>
+                    <?php endif; ?>
 
                     <?php if ($row['status'] == 1): ?>
                     <hr class="my-4">
