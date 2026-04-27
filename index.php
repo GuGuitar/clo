@@ -416,7 +416,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h6 class="fw-bold mb-1">นางสาว กมลพัชร ดวงมณี</h6>
+                    <h6 class="fw-bold mb-1">กมลพัชร ดวงมณี</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010610</small>
                 </div>
             </div>
@@ -431,7 +431,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h6 class="fw-bold mb-1">นาย ธนพนธ์ ข้อพิสังข์</h6>
+                    <h6 class="fw-bold mb-1">ธนพนธ์ ข้อพิสังข์</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010623</small>
                 </div>
             </div>
@@ -446,7 +446,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h6 class="fw-bold mb-1">นาย พัทธดนย์ คงคำ</h6>
+                    <h6 class="fw-bold mb-1">พัทธดนย์ คงคำ</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010636</small>
                 </div>
             </div>
@@ -461,7 +461,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h6 class="fw-bold mb-1">นางสาว วรรณษา เทียมอุบล</h6>
+                    <h6 class="fw-bold mb-1">วรรณษา เทียมอุบล</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010645</small>
                 </div>
             </div>
@@ -476,7 +476,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h6 class="fw-bold mb-1">นางสาว อรสินี เดชเทวาประทาน</h6>
+                    <h6 class="fw-bold mb-1">อรสินี เดชเทวาประทาน</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010652</small>
                 </div>
             </div>
