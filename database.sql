@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS `users`;
 -- Users Table
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
   `role` enum('student','staff','teacher') NOT NULL,
   `first_name` varchar(100) NOT NULL,
@@ -19,10 +19,8 @@ CREATE TABLE `users` (
   `year_level` int(11) DEFAULT NULL,
   `profile_image` varchar(255) DEFAULT NULL,
   `education` text DEFAULT NULL,
-  `student_year` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Requests Table
 CREATE TABLE `internship_requests` (
