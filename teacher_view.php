@@ -24,7 +24,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'approve') {
     }
 }
 
-// การส่งผลการนิเทสน์
+// การส่งผลการนิเทศน์
 if (isset($_POST['action']) && $_POST['action'] === 'evaluate') {
     $comments = $conn->real_escape_string($_POST['supervision_comments']);
     $eval_sql = "INSERT INTO evaluations (request_id, teacher_id, supervision_comments) 
