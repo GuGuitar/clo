@@ -248,19 +248,101 @@
     <section id="pr" class="mb-5 bg-white p-4 rounded shadow-sm">
         <h2 class="section-title">ประชาสัมพันธ์กิจกรรมต่างๆ</h2>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+            <!-- PR Item 1 -->
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" data-bs-toggle="modal" data-bs-target="#prModal1">
                 <div>
                     <div class="fw-bold mb-1">กิจกรรมแนะแนวการเตรียมตัวฝึกงาน ปี 2569</div>
                     <small class="text-muted">เชิญชวนนิสิตชั้นปีที่ 3-4 เข้าร่วมกิจกรรมรับฟังประสบการณ์จากรุ่นพี่</small>
                 </div>
                 <span class="badge bg-primary rounded-pill mt-2">New</span>
             </a>
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+            <!-- PR Item 2 -->
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" data-bs-toggle="modal" data-bs-target="#prModal2">
                 <div>      
                     <div class="fw-bold mb-1">เปิดรับสมัครบริษัทเข้าร่วมโครงการสหกิจศึกษา</div>
                     <small class="text-muted">สำหรับองค์กรที่ต้องการรับนิสิตนักศึกษาเข้าฝึกปฏิบัติงานในภาคการศึกษาต่อไป</small>
                 </div>
             </a>
+        </div>
+
+        <!-- PR Modals -->
+        <!-- Modal 1 -->
+        <div class="modal fade" id="prModal1" tabindex="-1" aria-labelledby="prModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title fw-bold" id="prModal1Label">กิจกรรมแนะแนวการเตรียมตัวฝึกงาน ปี 2569</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="badge bg-primary-subtle text-primary p-2 px-3 rounded-pill mb-2">Internal Activity</div>
+                            <h4 class="fw-bold">เตรียมพร้อมสู่โลกการทำงานจริง</h4>
+                        </div>
+                        <p class="lead text-muted">เชิญชวนนิสิตชั้นปีที่ 3 และ 4 ทุกสาขาวิชา เข้าร่วมกิจกรรมรับฟังการแนะแนวและแชร์ประสบการณ์ตรงจากการฝึกงานของรุ่นพี่</p>
+                        <hr class="my-4">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold text-primary mb-2">รายละเอียดกิจกรรม:</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> การเตรียม Portfolio ให้น่าสนใจ</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> เทคนิคการสัมภาษณ์งานเบื้องต้น</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> วัฒนธรรมองค์กรที่ควรรู้</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold text-primary mb-2">กำหนดการ:</h6>
+                                <p class="mb-1"><strong>วันที่:</strong> 15 พฤษภาคม 2569</p>
+                                <p class="mb-1"><strong>เวลา:</strong> 13:00 - 16:30 น.</p>
+                                <p class="mb-0"><strong>สถานที่:</strong> ห้องประชุมสิรินธร ชั้น 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary px-4 w-100" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="prModal2" tabindex="-1" aria-labelledby="prModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title fw-bold" id="prModal2Label">เปิดรับสมัครบริษัทเข้าร่วมโครงการสหกิจศึกษา</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="badge bg-secondary-subtle text-dark p-2 px-3 rounded-pill mb-2">Cooperative Education</div>
+                            <h4 class="fw-bold">สร้างเครือข่ายความร่วมมือกับภาคอุตสาหกรรม</h4>
+                        </div>
+                        <p class="text-muted">โครงการสหกิจศึกษาเปิดรับสมัครสถานประกอบการและบริษัทที่สนใจรับนิสิตเข้าฝึกปฏิบัติงาน เพื่อร่วมสร้างบุคลากรที่มีคุณภาพสู่ตลาดแรงงาน</p>
+                        <div class="bg-light p-3 rounded mb-4">
+                            <h6 class="fw-bold mb-2">คุณสมบัติเบื้องต้นของสถานประกอบการ:</h6>
+                            <ul class="mb-0">
+                                <li>มีลักษณะงานที่ตรงกับสาขาวิชาของนิสิต</li>
+                                <li>มีบุคลากรที่สามารถให้คำปรึกษา (Mentor) ตลอดระยะเวลาการฝึก</li>
+                                <li>สามารถประเมินผลการปฏิบัติงานของนิสิตได้</li>
+                            </ul>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <h6 class="fw-bold text-primary">ระยะเวลาการฝึก</h6>
+                                <p>1 ภาคการศึกษา (ประมาณ 4 เดือน)</p>
+                            </div>
+                            <div class="col">
+                                <h6 class="fw-bold text-primary">ปิดรับสมัคร</h6>
+                                <p>30 มิถุนายน 2569</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary px-4 w-100" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
