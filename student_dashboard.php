@@ -8,12 +8,13 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
 
 $student_id = $_SESSION['user_id'];
 
-// Get all requests for this student
+// เก็บ Requests ของ นิสิตคนนี้
 $sql = "SELECT * FROM internship_requests WHERE student_id = $student_id ORDER BY created_at DESC";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="th">
+    <!-- ส่วนแดชบอร์ดนิสิต -->
 <head>
     <meta charset="UTF-8">
     <title>แดชบอร์ดนิสิต | Internships System</title>

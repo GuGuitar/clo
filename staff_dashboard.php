@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
     exit();
 }
 
-// Get all requests with student names
+// เลือก Requests กับรายชื่อของนิสิตทั้งหมด
 $sql = "SELECT ir.*, u.first_name, u.last_name, u.username as student_id_code 
         FROM internship_requests ir 
         JOIN users u ON ir.student_id = u.id 
@@ -24,7 +24,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="swu-theme.css">
 </head>
 <body>
-
+<!-- หน้าของเจ้าหน้าที่ -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Internships (Staff Dashboard)</a>

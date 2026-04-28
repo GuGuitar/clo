@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS `internships` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `internships`;
 
--- Drop tables if they exist to allow re-running the script
+-- Drop tables ถ้ามีอยู่แล้วทำให้รัน script ได้
 DROP TABLE IF EXISTS `evaluations`;
 DROP TABLE IF EXISTS `internship_requests`;
 DROP TABLE IF EXISTS `users`;
@@ -68,8 +68,7 @@ CREATE TABLE `evaluations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Insert Mock Data
--- Password is '1234' for everyone. For production, apply hashing like password_hash(), but for this exercise plain or simple hash is fine. We will use plain for simplicity as requested 'Password: 1234'.
-
+-- ใช้รหัส '1234' สำหรับทุก role
 -- Users (Staff, Teachers, Students)
 INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`title`,`year_level`,`profile_image`,`education`) VALUES
 	 ('admin','1234','staff','Admin','Krub',NULL,NULL,NULL,NULL),

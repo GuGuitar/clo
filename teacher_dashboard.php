@@ -6,13 +6,14 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'teacher') {
     exit();
 }
 
-// Get all requests with student names
+// เลือก Requests กับรายชื่อของนิสิตทั้งหมด
 $sql = "SELECT ir.*, u.first_name, u.last_name, u.username as student_id_code 
         FROM internship_requests ir 
         JOIN users u ON ir.student_id = u.id 
         ORDER BY ir.created_at DESC";
 $result = $conn->query($sql);
 ?>
+<!-- ส่วนแดชบอร์ดของอาจารย์ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>

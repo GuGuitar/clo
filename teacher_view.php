@@ -16,7 +16,7 @@ $teacher_id = $_SESSION['user_id'];
 $success_approve = false;
 $success_eval = false;
 
-// Handle Approve action
+// การอนุมัติคำขอ
 if (isset($_POST['action']) && $_POST['action'] === 'approve') {
     $update_sql = "UPDATE internship_requests SET status = 2 WHERE id = $request_id AND status = 1";
     if ($conn->query($update_sql) === TRUE) {
@@ -24,7 +24,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'approve') {
     }
 }
 
-// Handle Evaluation submission
+// การส่งผลการนิเทสน์
 if (isset($_POST['action']) && $_POST['action'] === 'evaluate') {
     $comments = $conn->real_escape_string($_POST['supervision_comments']);
     $eval_sql = "INSERT INTO evaluations (request_id, teacher_id, supervision_comments) 
@@ -34,7 +34,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'evaluate') {
     }
 }
 
-// Fetch details
+// การดึงรายละเอียดของข้อมูล
 $sql = "SELECT ir.*, u.first_name, u.last_name, u.username as student_id_code, u.year_level 
         FROM internship_requests ir 
         JOIN users u ON ir.student_id = u.id 
@@ -47,9 +47,10 @@ if ($result->num_rows == 0) {
 }
 $row = $result->fetch_assoc();
 
-// Fetch evaluations if any
+// ดึงข้อมูลการนิเทศน์ (ถ้ามี)
 $eval_result = $conn->query("SELECT * FROM evaluations WHERE request_id = $request_id");
 ?>
+<!-- ส่วนของรายละเอียดคำขอ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -188,7 +189,7 @@ $eval_result = $conn->query("SELECT * FROM evaluations WHERE request_id = $reque
                 </div>
             </div>
 
-            <!-- การนิเทศ / Evaluation Section -->
+            <!-- การนิเทศน์ / Evaluation Section -->
             <div class="card shadow border-0">
                 <div class="card-header bg-dark text-white pt-3 pb-2 px-4">
                     <h5 class="fw-bold mb-0">บันทึกผลการนิเทศน์ / สิ่งที่อาจารย์พบ</h5>
@@ -210,7 +211,7 @@ $eval_result = $conn->query("SELECT * FROM evaluations WHERE request_id = $reque
                         </div>
                     <?php endif; ?>
 
-                    <!-- Form to add new evaluation -->
+                    <!-- แบบฟอร์มบันทึกการนิเทศน์ -->
                     <form method="POST" action="">
                         <input type="hidden" name="action" value="evaluate">
                         <div class="mb-3">

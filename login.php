@@ -12,13 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $conn->real_escape_string($_POST['username']);
     $password = $conn->real_escape_string($_POST['password']);
     
-    // Check user in database
+    // เช็คข้อมูลผู้ใช้ในฐานข้อมูล
     $sql = "SELECT id, role, first_name, last_name, password FROM users WHERE username='$username'";
     $result = $conn->query($sql);
     
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        // Since we are using plain 1234, we check directly. In real app use password_verify()
+        // เช็ครหัสผ่านว่าตรงกับ 1234 ในฐานข้อมูลมั้ย
         if ($password === $row['password']) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="swu-theme.css">
 </head>
 <body>
-
+        <!-- ส่วน login-card -->
 <div class="card login-card">
     <div class="login-header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Logo_of_Srinakharinwirot_University.svg/1280px-Logo_of_Srinakharinwirot_University.svg.png" alt="SWU Logo" class="mb-3" style="height: 80px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">

@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
 $student_id = $_SESSION['user_id'];
 $success = false;
 
-// Fetch user data for display
+// ดึงข้อมูลจากฐานข้อมูลมาแสดง
 $user_sql = "SELECT * FROM users WHERE id = '$student_id'";
 $user_res = $conn->query($user_sql);
 $user_data = $user_res->fetch_assoc();
@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!-- ระบบยื่นขอฝึกงาน -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -98,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 </nav>
-
+<!-- หน้าแบบฟอร์มขอฝึกงาน -->
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">

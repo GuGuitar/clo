@@ -14,7 +14,7 @@ if (!isset($_GET['id'])) {
 $request_id = intval($_GET['id']);
 $success = false;
 
-// Handle status update
+// การเปลี่ยนสถานะของ การขอฝึกงาน
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['status'])) {
     $new_status = intval($_POST['status']);
     $update_sql = "UPDATE internship_requests SET status = $new_status WHERE id = $request_id";
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['status'])) {
     }
 }
 
-// Fetch details
+// ดึงรายละเอียดของข้อมูลนิสิต
 $sql = "SELECT ir.*, u.first_name, u.last_name, u.username as student_id_code, u.year_level 
         FROM internship_requests ir 
         JOIN users u ON ir.student_id = u.id 
@@ -36,6 +36,7 @@ if ($result->num_rows == 0) {
 }
 $row = $result->fetch_assoc();
 ?>
+<!-- ดูรายละเอียดขำคอ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>

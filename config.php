@@ -6,23 +6,22 @@ $username = "root";
 $password = "";
 $dbname = "internships";
 
-// Create connection
+// สร้าง connection
 $conn = new mysqli($servername, $username, $password);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Select database
+// เลือก database
 if (!$conn->select_db($dbname)) {
-    // If database doesn't exist, we could try to create it, but we rely on the database.sql setup
     die("Database '$dbname' not selected. Please ensure you have imported database.sql. Error: " . $conn->error);
 }
 
 // Set charset
 $conn->set_charset("utf8mb4");
 
-// Helper function to format status
+// ตัวบอกสถานะ
 function getStatusLabel($status_code) {
     switch ($status_code) {
         case 1: return '<span class="badge bg-secondary">รับเรื่องเข้าระบบ</span>';

@@ -91,7 +91,6 @@
     </div>
   </div>
 </nav>
-<!-- hello -->
 
 <div id="heroCarousel" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
     <div class="carousel-indicators">
