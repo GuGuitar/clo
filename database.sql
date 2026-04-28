@@ -76,17 +76,17 @@ INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`titl
 ปริญญาโท: วท.ม. การจัดการเทคโนโลยีสารสนเทศ , มหาวิทยาลัยหอการค้าไทย\\n
 ปริญญาตรี: วท.บ. ศาสตร์คอมพิวเตอร์ , มหาวิทยาลัยธรรมศาสตร์'),
 	 ('6610001','1234','student','Somchai','Jaidee',NULL,3,NULL,NULL),
-	 ('6610002','1234','student','Somsri','Rukthai',NULL,4,NULL,NULL),
+	 ('6510002','1234','student','Somsri','Rukthai',NULL,4,NULL,NULL),
 	 ('6610003','1234','student','Mana','Manee',NULL,3,NULL,NULL),
-	 ('6610004','1234','student','Piti','Chujai',NULL,4,NULL,NULL),
+	 ('6510004','1234','student','Piti','Chujai',NULL,4,NULL,NULL),
 	 ('6610005','1234','student','Weera','Suwan',NULL,3,NULL,NULL),
-	 ('6610006','1234','student','Napa','Deemak',NULL,4,NULL,NULL),
+	 ('6510006','1234','student','Napa','Deemak',NULL,4,NULL,NULL),
 	 ('6610007','1234','student','Komsan','Kengkan',NULL,3,'',NULL),
-	 ('6610008','1234','student','Suda','Ngamta',NULL,4,NULL,NULL);
+	 ('6510008','1234','student','Suda','Ngamta',NULL,4,NULL,NULL);
 
 INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`title`,`year_level`,`profile_image`,`education`) VALUES
 	 ('6610009','1234','student','Wichai','Phoprasert',NULL,3,NULL,NULL),
-	 ('6610010','1234','student','Naree','Rakrien',NULL,4,NULL,NULL),
+	 ('6510010','1234','student','Naree','Rakrien',NULL,4,NULL,NULL),
 	 ('teacher02','1234','teacher','ฐิติ','อติชาติชยากร','อ.ดร.',NULL,'thiti-scaled.jpg','ปริญญาเอก: ค.ด. เทคโนโลยีและสื่อสารการศึกษา, จุฬาลงกรณ์มหาวิทยาลัย\\n
 ปริญญาโท: อ.ม. บรรณารักษศาสตร์และสารนิเทศศาสตร์, จุฬาลงกรณ์มหาวิทยาลัย\\n
 ปริญญาตรี: ศศ.บ. บรรณารักษศาสตร์และสารสนเทศศาสตร์, มหาวิทยาลัยศรีนครินทรวิโรฒ'),
@@ -114,3 +114,18 @@ INSERT INTO `users` (`username`,`password`,`role`,`first_name`,`last_name`,`titl
 INSERT INTO `internship_requests` (`student_id`, `program_type`, `major`, `student_phone`, `student_email`, `internship_type`, `course_code`, `course_name`, `location_type`, `country`, `doc_language`, `doc_type`, `company_name`, `position`, `coordinator_name`, `agency_phone`, `agency_email`, `start_date`, `end_date`, `semester`, `academic_year`, `attempt_number`, `previous_agency`, `reason_for_change`, `status`) VALUES
 (3, 'วท.บ.', 'วิทยาการคอมพิวเตอร์', '0812345678', 'mana@example.com', 'experience', NULL, NULL, 'domestic', NULL, 'thai', 'consideration', 'Google Thai', 'Frontend Dev', 'K. Somsak', '02-111-2222', 'hr@google.co.th', '2026-06-01', '2026-08-31', '1', '2569', 1, NULL, NULL, 1),
 (4, 'ศศ.บ.', 'ภาษาอังกฤษ', '0898765432', 'piti@example.com', 'course', 'EN401', 'Internship in English', 'international', 'UK', 'english', 'consideration_and_referral', 'Deepmind', 'AI Engineer', 'Mr. Smith', '+44-1234-567', 'smith@deepmind.com', '2026-06-01', '2026-08-31', '1', '2569', 2, 'OpenAI', 'Visa issue', 2);
+
+-- เพิ่ม User ปี1,2
+INSERT INTO users (username,password,role,first_name,last_name,title,year_level,profile_image,education) values
+	('6810001','1234','student','Kaiyang','Vichian',null,'1',null,null);
+
+
+INSERT INTO users (username,password,role,first_name,last_name,title,year_level,profile_image,education) values
+	('6810002','1234','student','Choakdee','Meechai',null,'1',null,null);
+
+
+INSERT INTO users (username,password,role,first_name,last_name,title,year_level,profile_image,education) values
+	('6810003','1234','student','Choakchai','Meewua',null,'1',null,null),
+	('6710001','1234','student','Somtum','Kaitod',null,'2',null,null),
+	('6710002','1234','student','Reya','Wongswart',null,'2',null,null),
+	('6710003','1234','student','Neenarour','Nopnapha',null,'2',null,null);

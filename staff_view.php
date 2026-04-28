@@ -36,7 +36,7 @@ if ($result->num_rows == 0) {
 }
 $row = $result->fetch_assoc();
 ?>
-<!-- ดูรายละเอียดขำคอ -->
+<!-- ดูรายละเอียดคำขอ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
