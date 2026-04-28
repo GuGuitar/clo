@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Internships (Student)</a>
+    <a class="navbar-brand fw-bold" href="index.php">Internships (Student)</a>
     <div class="d-flex">
         <span class="navbar-text text-white me-3">สวัสดี, <?= $_SESSION['name'] ?></span>
         <a href="logout.php" class="btn btn-outline-light btn-sm">ออกจากระบบ</a>
