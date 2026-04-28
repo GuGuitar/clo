@@ -500,7 +500,7 @@
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center">
                     <div class="teacher-photo-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
-                        <img src="uploads/Pic/รถ.jpg" alt="ธนพนธ์ ข้อพิสังข์" class="teacher-photo">
+                        <img src="uploads/Pic/รถถ.jpg" alt="ธนพนธ์ ข้อพิสังข์" class="teacher-photo">
                     </div>
                     <h6 class="fw-bold mb-1">ธนพนธ์ ข้อพิสังข์</h6>
                     <small class="text-muted">รหัสนิสิต: 67101010623</small>
